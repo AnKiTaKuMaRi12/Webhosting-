@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amvi Tiwary - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+        color: white;
+        background: linear-gradient(270deg, #6a11cb, #2575fc);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+    }
+    @keyframes gradientBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+    header {
+        text-align: center;
+        padding: 30px;
+        font-family: 'Pacifico', cursive;
+        font-size: 2.5rem;
+        background: rgba(0,0,0,0.2);
+    }
+    section {
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #ffe082;
+    }
+    p {
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    .skills, .hobbies, .achievements {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .card {
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        width: 200px;
+        transition: 0.3s;
+    }
+    .card:hover {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.2);
+    }
+    .card i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #ffd54f;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0,0,0,0.3);
+        font-size: 0.9rem;
+    }
+    /* Floating bubbles */
+    .bubble {
+        position: fixed;
+        bottom: -100px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        animation: rise 10s infinite ease-in;
+    }
+    @keyframes rise {
+        0% {transform: translateY(0) scale(1);}
+        100% {transform: translateY(-110vh) scale(0.5);}
+    }
+</style>
+</head>
+<body>
+
+<header>
+    🌊 Amvi Tiwary - My Cool Portfolio 🌊
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>Hi! I’m <b>Amvi Tiwary</b>, an 8th standard student from <b>Ramagya School</b>. My dad’s name is <b>Pawan Tiwary</b> and my mom’s name is <b>Ambari Mishra</b>. I absolutely love swimming and I’m always ready to dive into new adventures — both in water and in life! 🏊‍♀️</p>
+</section>
+
+<section>
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="card">
+            <i class="fas fa-swimmer"></i>
+            <h3>Swimming</h3>
+            <p>Fast, graceful, and competitive in the pool.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Art</h3>
+            <p>Creative and colorful designs.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-book-reader"></i>
+            <h3>Learning</h3>
+            <p>Always curious and eager to know more.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Hobbies</h2>
+    <div class="hobbies">
+        <div class="card">
+            <i class="fas fa-music"></i>
+            <h3>Music</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-bicycle"></i>
+            <h3>Cycling</h3>
+        </div>
+        <div class="card">
+            <i class="fas fa-camera"></i>
+            <h3>Photography</h3>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Achievements</h2>
+    <div class="achievements">
+        <div class="card">
+            <i class="fas fa-medal"></i>
+            <h3>Gold Medal in Swimming</h3>
+            <p>Won at the inter-school swimming competition.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-star"></i>
+            <h3>Best Student Award</h3>
+            <p>Recognized for academics & extracurriculars.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 Amvi Tiwary | Made with 💙 and a splash of creativity
+</footer>
+
+<script>
+    // Create floating bubbles
+    function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        document.body.appendChild(bubble);
+        const size = Math.random() * 50 + 10;
+        bubble.style.width = size + 'px';
+        bubble.style.height = size + 'px';
+        bubble.style.left = Math.random() * window.innerWidth + 'px';
+        bubble.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        setTimeout(() => {
+            bubble.remove();
+        }, 10000);
+    }
+    setInterval(createBubble, 500);
+</script>
+
+</body>
+</html>
